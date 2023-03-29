@@ -102,6 +102,7 @@ and $72$ cells across the $\theta$-direction.
 
 Nested SMR that we implemented helped us to lower the resolution at the root level keeping high enough resolution around the Hill's 
 sphere to resolve the CPD properly. The detailed description of the finest of the refined regions is shown on Table \ref{tab:smr}.
+%
 \begin{table}[]
     \label{tab:smr}
     \begin{tabular}{lll}
@@ -116,9 +117,25 @@ sphere to resolve the CPD properly. The detailed description of the finest of th
                    & $0.95 \rightarrow 1.05$         & $r$      \\ \hline
                    & $\pm 0.05$                      & $\phi$  
     \end{tabular}
-    \end{table}
-
-
+\end{table}
+%
+The definitions of the normalization units and the corresponding values are listed in Table \ref{tab:units}.
+%
+\begin{table}[]
+    \label{tab:units}
+    \caption{Normalization Units and Corresponding Values}
+    \begin{tabular}{lll}
+    \hline \hline
+    Quantity            & Unit                  & Value                   \\ \hline
+    Length              & $r_p$                 & $7.41\times 10^{13}$ cm \\
+    Velocity            & $v_{K0}$              &                         \\
+    Time                & $r_p/v_{K0}$          & $3.7 \times 10^8$ s     \\
+    Density             & $\rho_0$              &                         \\
+    Pressure            & $\rho_0 v_{K0}^2$     &                         \\
+    Mass accretion rate & $\rho_0 r_p^2 v_{K0}$ &                         \\ \hline
+    \end{tabular}
+\end{table}
+%
 \subsubsection{Resolution}
 We tried two different sets of resolutions with two different static mesh refinement (SMR) levels around the location of a planet: SMR2 (for SMR level $l=2$) and SMR3 (for SMR level $l=3$).
 
