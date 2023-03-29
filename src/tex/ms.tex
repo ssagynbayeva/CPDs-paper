@@ -14,16 +14,18 @@
 % Author list
 \author[0000-0002-6650-3829]{Sabina Sagynbayeva}
 \affiliation{Department of Physics and Astronomy, Stony Brook University, Stony Brook, NY 11794, USA}
-
-\author[0000-0002-2624-3399]{Yan-Fei Jiang(姜燕飞)}
 \affiliation{Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Avenue, New York, NY 10010, USA}
 
-\author{Zhaohuan Zhu(朱照寰)}
-\affiliation{Department of Physics and Astronomy, University of Nevada, Las Vegas, 4505 S.~Maryland Parkway, Las Vegas, NV~89154-4002, USA}
+% \author[0000-0002-2624-3399]{Yan-Fei Jiang(姜燕飞)}
+% \affiliation{Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Avenue, New York, NY 10010, USA}
+
+% \author{Zhaohuan Zhu(朱照寰)}
+% \affiliation{Department of Physics and Astronomy, University of Nevada, Las Vegas, 4505 S.~Maryland Parkway, Las Vegas, NV~89154-4002, USA}
 
 \author[0000-0001-5032-1396]{Philip J. Armitage}
-\affiliation{Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Avenue, New York, NY 10010, USA}
 \affiliation{Department of Physics and Astronomy, Stony Brook University, Stony Brook, NY 11794, USA}
+\affiliation{Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Avenue, New York, NY 10010, USA}
+
 
 % Abstract with filler text
 \begin{abstract}
@@ -91,6 +93,31 @@ The orbital frequency of the disk:
 \end{equation}
 
 $v_r=v_\theta=0$
+
+\subsubsection{Grid setup}
+We use spherical-polar grid with a nested static mesh refinement (SMR) around the location of the planet. The intervals that span in radial, polar, and azimuthal
+directions are $[0.4, 2.5]$, $[9\pi/20, 11\pi/20]$, and $[0, 2\pi]$, respectively. Aiming for $50$ cells around the Hill's sphere, we came up with the 
+effective resolution at the \emph{root} level: $168$ cells across the $r$-direction, $576$ cells across the $\phi$-direction, 
+and $72$ cells across the $\theta$-direction.
+
+Nested SMR that we implemented helped us to lower the resolution at the root level keeping high enough resolution around the Hill's 
+sphere to resolve the CPD properly. The detailed description of the finest of the refined regions is shown on Table \ref{tab:smr}.
+\begin{table}[]
+    \label{tab:smr}
+    \begin{tabular}{lll}
+                   &                                 &          \\ \hline \hline
+    Refinement \#1 & $9\pi/20 \rightarrow 11\pi/20$  & $\theta$ \\
+                   & $0.8 \rightarrow 1.2$           & $r$      \\
+                   & $\pm 0.2$                       & $\phi$   \\ \hline
+    Refinement \#2 & $19\pi/40 \rightarrow 21\pi/40$ & $\theta$ \\
+                   & $0.9 \rightarrow 1.1$           & $r$      \\
+                   & $\pm 0.1$                       & $\phi$   \\ \hline
+    Refinement \#3 & $39\pi/80 \rightarrow 41\pi/80$ & $\theta$ \\
+                   & $0.95 \rightarrow 1.05$         & $r$      \\ \hline
+                   & $\pm 0.05$                      & $\phi$  
+    \end{tabular}
+    \end{table}
+
 
 \subsubsection{Resolution}
 We tried two different sets of resolutions with two different static mesh refinement (SMR) levels around the location of a planet: SMR2 (for SMR level $l=2$) and SMR3 (for SMR level $l=3$).
