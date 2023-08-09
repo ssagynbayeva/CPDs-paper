@@ -13,14 +13,15 @@
 
 % Author list
 \author[0000-0002-6650-3829]{Sabina Sagynbayeva}
+\email{sabina.sagynbayeva@stonybrook.com}
 \affiliation{Department of Physics and Astronomy, Stony Brook University, Stony Brook, NY 11794, USA}
 \affiliation{Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Avenue, New York, NY 10010, USA}
 
 % \author[0000-0002-2624-3399]{Yan-Fei Jiang(姜燕飞)}
 % \affiliation{Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Avenue, New York, NY 10010, USA}
 
-% \author{Zhaohuan Zhu(朱照寰)}
-% \affiliation{Department of Physics and Astronomy, University of Nevada, Las Vegas, 4505 S.~Maryland Parkway, Las Vegas, NV~89154-4002, USA}
+\author[0000-0001-9222-4367]{Rixin Li (李日新)}
+\affiliation{Center for Astrophysics and Planetary Science, Department of Astronomy, Cornell University, Ithaca, NY 14853, USA}
 
 \author[0000-0001-5032-1396]{Philip J. Armitage}
 \affiliation{Department of Physics and Astronomy, Stony Brook University, Stony Brook, NY 11794, USA}
@@ -156,41 +157,6 @@ The definitions of the normalization units and the corresponding values are list
 \end{table}
 %
 \subsubsection{Resolution}
-We tried two different sets of resolutions with two different static mesh refinement (SMR) levels around the location of a planet: SMR2 (for SMR level $l=2$) and SMR3 (for SMR level $l=3$).
-
-The resolution for non-refined disk is $[192,80,384]$ cells for $r$-,$\theta$-, and $\phi$-directions, and the sizes of one cell in $r$-,$\theta$-, and $\phi$-directions are $[3.65\times 10^{-3}r_p, 3.75\times 10^{-3}, 1.6\times 10^{-2}]$. 
-
-I increased the resolution in the following regions: $0.9-1.1 r_p$ in $r$-direction, $87^o-93^o$ in $\theta$-direction, and $177^o-183^o$ in $\phi$-direction. The resolution for refined disk with level $l=3$ is $[360 (222+69+69),160 (106+67+67),410 (24+193+193)]$ cells for $r$-,$\theta$-, and $\phi$-directions, and the sizes of one refined cell in $r$-,$\theta$-, and $\phi$-directions are $[9\times 10^{-4}r_p, 9.36\times 10^{-4}, 4\times 10^{-3}]$.
-Look at the Figure \ref{fig:twotorques} to see the comparison of the total torques for different levels of refinement.
-\begin{figure}
-\centering
-	\includegraphics[width=0.6\columnwidth]{comparison_torques.png}
-    \caption{The comparison between the torques.}
-    \label{fig:twotorques}
-\end{figure}
-
-
-
-\subsection{Energy injection and transport}
-I injected the energy of value $L_c=24\times 10^{-11}$ (times the time) into the sphere of radius $0.003 r_p$ (8 cells) around the planet location.
-
-The thermal diffusivity is $\chi=0.00013 H^2\Omega$ with $\lambda_c=0.5r_p$. The Eq. \ref{eq:diffusivity} is taken from the Eq. 17 in \citet{hankla20}. 
-Look at the Figure \ref{fig:den_smr3} to see how the disk looks like with these parameters (including the thermal diffusivity). 
-\begin{equation}\label{eq:diffusivity}
-    \chi=\frac{3\lambda_c^2\gamma\Omega_0}{8\pi^2}
-\end{equation}
-
-\begin{figure}
-\centering
-	\includegraphics[width=0.48\columnwidth]{smr3zoomeddisk.png}
-	\includegraphics[width=0.48\columnwidth]{smr3disk.png}
-    \caption{The density profile of the disk with a perturber with SMR level $l=3$ at the 7th global orbit.}
-    \label{fig:den_smr3}
-\end{figure}
-
-
-
-
 
 \subsection{Athena++ simulations}
 
