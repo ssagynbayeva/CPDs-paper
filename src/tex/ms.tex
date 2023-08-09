@@ -35,7 +35,26 @@
 % Main body with filler text
 \section{Introduction} 
 \label{sec:intro}
-We follow up \citet{hankla20} :)
+Circumplanetary disks (CPDs) are believed to be a natural byproduct of the planet formation process, arising from the vertical infall of gas from the 
+protoplanetary disk onto the growing protoplanet \citep{Ward2010}. Simulations have shown that CPDs exhibit complex dynamics affected by viscosity, 
+thermal structure, magnetic fields, and turbulence \citep{Fujii2011,Gressel2013,Szul2014}. Early numerical studies utilized 
+two-dimensional hydrodynamic models to demonstrate disk formation and characterize basic properties like size and density distribution \citep{Dangelo2003}. 
+Later work incorporated three-dimensional simulations to better capture non-axisymmetric flows and vertical disk structure \citep{Machida2008}. 
+
+A major limitation of early models was the use of simplified thermodynamic treatments like locally isothermal equations of state. Recent research has 
+focused on more realistic energy equations to determine the effects of radiation transport, viscous heating, and radiative cooling on CPD structure and 
+evolution \citep{Szul2016,Zhu2016}. Thermal physics can alter turbulence and angular momentum transport in the disk, which may affect accretion onto the planet. 
+Other areas of active research include studying magnetic field amplification through MRI-driven turbulence \citep{Fujii2014}, exploring disk chemistry 
+and composition \citep{Fujii2017}, and analyzing impacts of planet mass and orbital properties \citep{Szul2017a}.
+
+CPDs have also long been hypothesized to be the birthplaces of regular moons around giant planets \citep{Lunine1982,Canup2006}. 
+However, the efficiency of satellite formation within CPDs depends on several factors that remain poorly constrained. Early analytic work suggested disks 
+may be too compact and short-lived to readily form large moons \citep{Goodman2001}. But recent hydrodynamic simulations indicate CPDs can exhibit 
+extended disks over 100s of planetary radii and lifetimes over 1000 orbits \citep{Szul2016,Fujii2017}.
+
+Higher resolution 3D MHD models reveal turbulence and instabilities that could concentrate solids and aid satellite growth. 
+Analysis of pebble accretion shows Galilean moon formation may be possible in CPDs around Jupiter-like planets \citep{Shibaike2017,Ronnet2018}. 
+
 
 \section{Methods}
 \label{sec:methods}
@@ -114,8 +133,8 @@ sphere to resolve the CPD properly. The detailed description of the finest of th
                    & $0.9 \rightarrow 1.1$           & $r$      \\
                    & $\pm 0.1$                       & $\phi$   \\ \hline
     Refinement \#3 & $39\pi/80 \rightarrow 41\pi/80$ & $\theta$ \\
-                   & $0.95 \rightarrow 1.05$         & $r$      \\ \hline
-                   & $\pm 0.05$                      & $\phi$  
+                   & $0.95 \rightarrow 1.05$         & $r$      \\ 
+                   & $\pm 0.05$                      & $\phi$  \\ \hline
     \end{tabular}
 \end{table}
 %
@@ -126,13 +145,13 @@ The definitions of the normalization units and the corresponding values are list
     \caption{Normalization Units and Corresponding Values}
     \begin{tabular}{lll}
     \hline \hline
-    Quantity            & Unit                  & Value                   \\ \hline
-    Length              & $r_p$                 & $7.41\times 10^{13}$ cm \\
-    Velocity            & $v_{K0}$              &                         \\
-    Time                & $r_p/v_{K0}$          & $3.7 \times 10^8$ s     \\
-    Density             & $\rho_0$              &                         \\
-    Pressure            & $\rho_0 v_{K0}^2$     &                         \\
-    Mass accretion rate & $\rho_0 r_p^2 v_{K0}$ &                         \\ \hline
+    Quantity            & Unit                  \\ \hline
+    Length              & $r_p$                  \\
+    Velocity            & $v_{K0}$                 \\
+    Time                & $r_p/v_{K0}$             \\
+    Density             & $\rho_0$                 \\
+    Pressure            & $\rho_0 v_{K0}^2$             \\
+    Mass accretion rate & $\rho_0 r_p^2 v_{K0}$               \\ \hline
     \end{tabular}
 \end{table}
 %
